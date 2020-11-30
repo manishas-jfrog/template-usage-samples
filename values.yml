@@ -25,11 +25,11 @@ Pipeline:
 
 DockerBuild:
   name: myDockerBuild
-  dockerfileLocation: .
+  dockerfileLocation: "."
   dockerFileName: Dockerfile
   dockerImageName: u16.jfrog-pipelines.com/docker-local/myImage
   dockerImageTag: ${run_number}
-  
+
 DockerPush:
   name: myDockerPush
   targetRepository: docker-local
