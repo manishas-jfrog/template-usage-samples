@@ -8,7 +8,7 @@ GitRepo:
     include: main
 
 Image:
-  name: myDockerImage
+  name: myImage
   registry: docker-local
   sourceRepository: demoArt
   imageName: u16.jfrog-pipelines.com/docker-local/dockerbase
