@@ -25,7 +25,6 @@ Pipeline:
 
 DockerBuild:
   name: myDockerBuild
-  dockerfileLocation: .
   dockerFileName: Dockerfile
   dockerImageName: u16.jfrog-pipelines.com/docker-local/myImage
   dockerImageTag: ${run_number}
