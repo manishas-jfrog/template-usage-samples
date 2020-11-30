@@ -1,0 +1,35 @@
+artifactoryIntegration: demoArt
+
+GitRepo:
+  name: myGitRepo
+  gitProvider: manishas_jfrog
+  path: manishas-jfrog/template-usage-samples
+  branches:
+    include: main
+
+Image:
+  name: myDockerImage
+  registry: docker-local
+  sourceRepository: demoArt
+  imageName: u16.jfrog-pipelines.com/docker-local/myImage
+  imageTag: latest
+
+BuildInfo:
+  name: myBuildInfo
+  sourceArtifactory: demoArt
+  buildName: myBuildName
+  buildNumber: 1
+
+Pipeline:
+  name: myDockerPipeline
+
+DockerBuild:
+  name: myDockerBuild
+  dockerfileLocation: .
+  dockerFileName: Dockerfile
+  dockerImageName: u16.jfrog-pipelines.com/docker-local/myImage
+  dockerImageTag: ${run_number}
+  
+DockerPush:
+  name: myDockerPush
+  targetRepository: docker-local
