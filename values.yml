@@ -11,7 +11,7 @@ Image:
   name: myImage
   registry: docker-local
   sourceRepository: demoArt
-  dockerImageName: u16.jfrog-pipelines.com/docker-local/dockerbase
+  dockerImageName: pipedemo.jfrog.io/docker-local/dockerbase
   dockerImageTag: latest
 
 BuildInfo:
@@ -26,7 +26,7 @@ Pipeline:
 DockerBuild:
   name: myDockerBuild
   dockerFileName: Dockerfile
-  dockerImageName: u16.jfrog-pipelines.com/docker-local/dockerbase
+  dockerImageName: pipedemo.jfrog.io/docker-local/dockerbase
   dockerImageTag: ${run_number}
 
 DockerPush:
